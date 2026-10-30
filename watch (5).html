@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script data-cfasync="false" src="https://capitalhospitals.org/1/cd2ede3915aed8ac32648df7385b788a"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Live Sports Stream — Sportsurge, Streameast, Crackstreams | SportSurge</title>
+<meta name="description" content="Watch live sports streams on Sportsurge, Streameast and Crackstreams — soccer, NBA, NFL, UFC, cricket and more in one clean HD player on SportSurge.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#060a14">
+
+
+<!-- favicon -->
+<link rel="icon" type="image/png" href="https://cdn.isportsurge.ws/images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="https://cdn.isportsurge.ws/images/favicon.png">
+<link rel="apple-touch-icon" href="https://cdn.isportsurge.ws/images/favicon.png">
+
+
+<style>
+:root{
+  --bg:#060a14; --card:#0c1426; --card2:#101a30; --line:#1a2640; --line2:#2a3d66;
+  --violet:#2f7bff; --pink:#12c2e9; --text:#eef3ff; --text2:#a3b1cf; --text3:#6b7a9c; --live:#ff3b4e;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--body);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 500px at 85% -10%,rgba(47,123,255,.28),transparent 60%),radial-gradient(700px 450px at -5% 20%,rgba(18,194,233,.14),transparent 60%);
+  background-attachment:fixed}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid #ffc861;outline-offset:2px}
+.app{max-width:1100px;margin:0 auto;padding:1rem 1.25rem 3rem}
+
+/* header */
+.header{position:sticky;top:.75rem;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.7rem 1rem .7rem 1.1rem;border-radius:18px;background:rgba(10,16,32,.78);border:1px solid var(--line);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(0,4,12,.55)}
+.logo{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.03em;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:12px;overflow:hidden;flex:0 0 auto;
+  box-shadow:0 0 24px rgba(47,123,255,.45),0 4px 14px rgba(0,4,12,.5)}
+.logo-mark img{width:100%;height:100%;object-fit:cover;display:block}
+.head-right{display:flex;align-items:center;gap:.6rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 10px var(--live);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.45;transform:scale(.8)}}
+.back-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1rem;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--text2);font-weight:600;font-size:.85rem;text-decoration:none;transition:.25s}
+.back-btn:hover{border-color:var(--line2);color:var(--text);transform:translateY(-1px)}
+.discord-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border-radius:12px;background:#5865f2;color:#fff;
+  font-weight:600;font-size:.85rem;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 6px 20px rgba(88,101,242,.4)}
+.discord-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(88,101,242,.6)}
+
+/* player */
+.player-wrap{margin-top:1.25rem}
+.player-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.75rem;flex-wrap:wrap}
+.player-head h1{font-family:var(--display);font-size:clamp(1.05rem,2.6vw,1.45rem);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.live-tag{display:inline-flex;align-items:center;gap:.4rem;padding:.32rem .8rem;border-radius:99px;flex:0 0 auto;
+  background:rgba(255,59,78,.12);border:1px solid rgba(255,59,78,.35);color:#ffc9ce;font-size:.78rem;font-weight:700}
+.player-box{position:relative;width:100%;aspect-ratio:16/9;max-width:960px;margin:0 auto;border-radius:16px;overflow:hidden;
+  border:1px solid var(--line2);background:#000;box-shadow:0 24px 60px rgba(0,4,12,.5)}
+.player-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.no-stream{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
+  text-align:center;padding:1.5rem;color:var(--text2);background:var(--card)}
+.no-stream i{font-size:2rem;color:var(--text3)}
+.no-stream b{color:var(--text);font-size:1.05rem}
+.no-stream span{font-size:.88rem;max-width:40ch;line-height:1.6}
+
+/* controls */
+.controls{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-top:.85rem}
+.ctl{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.05rem;border-radius:11px;border:1px solid var(--line);
+  background:var(--card);color:var(--text2);font-weight:600;font-size:.82rem;cursor:pointer;text-decoration:none;transition:.25s}
+.ctl:hover{border-color:var(--line2);color:var(--text);transform:translateY(-1px)}
+
+/* info */
+.watch-info{margin-top:2.25rem;padding:1.3rem 1.5rem;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.watch-info h2{font-family:var(--display);font-size:1.12rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.55rem}
+.watch-info p{color:var(--text2);font-size:.92rem;line-height:1.75}
+.watch-info p+p{margin-top:.55rem}
+
+.foot{margin-top:1.5rem;text-align:center;color:var(--text3);font-size:.8rem}
+
+/* ---------- ADS (same as homepage) ---------- */
+.ad-side{position:fixed;top:50%;transform:translateY(-50%);width:160px;height:600px;z-index:40;display:none;overflow:hidden}
+#adLeft{left:10px}
+#adRight{right:10px}
+.ad-bottom{position:fixed;bottom:10px;left:50%;width:728px;height:90px;z-index:40;display:none;overflow:hidden;border-radius:12px;
+  transform:translateX(-50%);transform-origin:bottom center}
+@media(min-width:1620px){.ad-side{display:block}}
+@media(min-width:790px){.ad-bottom{display:block}body{padding-bottom:112px}}
+@media(max-width:789px){
+  .ad-bottom{display:block;transform:translateX(-50%) scale(.44);border-radius:8px}
+  body{padding-bottom:70px}
+}
+@media(max-width:640px){
+  .app{padding:.75rem .8rem 3rem}
+  .discord-btn span{display:none}.discord-btn{padding:.65rem .8rem}
+  .back-btn span{display:none}.back-btn{padding:.65rem .8rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <a class="logo" href="./"><div class="logo-mark"><img src="https://cdn.isportsurge.ws/images/favicon.png" alt="SportSurge logo"></div>Sportsurge</a>
+    <div class="head-right">
+      <a href="./" class="back-btn"><i class="fa-solid fa-arrow-left"></i><span>Schedule</span></a>
+      <a href="https://discord.gg/aEqBuf8Ys" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i><span>Join Discord</span></a>
+    </div>
+  </header>
+
+  <section class="player-wrap">
+    <div class="player-head">
+      <h1 id="mTitle">Live Sports Stream</h1>
+      <span class="live-tag"><span class="dot"></span>LIVE NOW</span>
+    </div>
+    <div class="player-box" id="playerBox">
+      <iframe id="player" src="" allowfullscreen allow="autoplay; fullscreen; encrypted-media; picture-in-picture" referrerpolicy="no-referrer" title="Live stream player"></iframe>
+    </div>
+    <div class="controls">
+      <a class="ctl" href="./"><i class="fa-solid fa-list"></i>Back to Schedule</a>
+      <button class="ctl" id="reloadBtn"><i class="fa-solid fa-rotate-right"></i>Reload Stream</button>
+      <a class="ctl" id="directLink" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Open Direct</a>
+    </div>
+  </section>
+
+  <section class="watch-info">
+    <h2>Watch Live Sports on Sportsurge, Streameast, Crackstreams</h2>
+    <p>This player is part of the Sportsurge, Streameast and Crackstreams schedule. Pick any match from the homepage — soccer, NBA, NFL, UFC, cricket, tennis or F1 — and it opens here in a clean 16:9 player with no clutter around it.</p>
+    <p>If the stream buffers or does not start, press Reload Stream once. Streams on Sportsurge, Streameast and Crackstreams sometimes take a few seconds to load, and a quick reload usually fixes it. Use Back to Schedule to return to the full match list at any time.</p>
+  </section>
+  <p class="foot">&copy; Sportsurge, Streameast, Crackstreams. All team and league names and logos belong to their respective owners.</p>
+</div>
+
+<!-- ===== ADS: sirf 3 div — same as homepage ===== -->
+<!-- Left 160x600 sticky -->
+<div class="ad-side" id="adLeft">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Right 160x600 sticky -->
+<div class="ad-side" id="adRight">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Bottom 728x90 sticky -->
+<div class="ad-bottom" id="adBottom">
+  <script type="text/javascript">
+    atOptions = {'key':'6786ca601524f56715d5859a0fc7658f','format':'iframe','height':90,'width':728,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+</div>
+
+<script>
+(function(){
+  const p=new URLSearchParams(location.search);
+  const url=p.get('url')||'';
+  const title=p.get('title')||'Live Sports Stream';
+  const safe=/^https?:\/\//i.test(url);
+
+  // title set karo (page + browser tab)
+  document.getElementById('mTitle').textContent=title;
+  document.title=title+' — Watch Live on SportSurge';
+
+  const box=document.getElementById('playerBox');
+  const frame=document.getElementById('player');
+  const direct=document.getElementById('directLink');
+  const reload=document.getElementById('reloadBtn');
+
+  if(safe){
+    frame.src=url;
+    direct.href=url;
+    reload.addEventListener('click',()=>{
+      frame.src='';
+      setTimeout(()=>frame.src=url,80);
+    });
+  }else{
+    box.innerHTML='<div class="no-stream"><i class="fa-solid fa-tv"></i><b>No stream selected.</b><span>Go back to the schedule and pick a match to watch it live here.</span><a class="ctl" href="./"><i class="fa-solid fa-list"></i>Back to Schedule</a></div>';
+    reload.style.display='none';
+    direct.style.display='none';
+  }
+})();
+</script>
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5048377,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+
+</body>
+</html>
